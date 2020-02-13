@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: "postgres:11"
+    container_name: "govin_db"
+    environment:
+      - POSTGRES_DB=govin_db
+      - POSTGRES_USER=govin_db_user
+      - POSTGRES_PASSWORD=govin_db_password
+    ports:
+      - "54320:5432"
+    restart: always
